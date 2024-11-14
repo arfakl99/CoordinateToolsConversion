@@ -1,0 +1,221 @@
+{
+  "pages": {
+    "page_0": {
+      "id": "page_0",
+      "mode": "FIT_WINDOW",
+      "type": "NORMAL",
+      "layout": {
+        "LARGE": "layout_0"
+      },
+      "isDefault": true,
+      "isVisible": true,
+      "label": "Page"
+    }
+  },
+  "layouts": {
+    "layout_0": {
+      "type": "FIXED",
+      "content": {
+        "1": {
+          "type": "WIDGET",
+          "widgetId": "widget_2",
+          "bbox": {
+            "left": "0.0%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.0%",
+            "width": "100.0%",
+            "height": "100.0%"
+          },
+          "setting": {
+            "autoProps": {
+              "right": false,
+              "left": true,
+              "top": true,
+              "bottom": false
+            },
+            "vCenter": false,
+            "hCenter": false
+          }
+        }
+      },
+      "order": [
+        "1"
+      ]
+    },
+    "layout_1": {
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "widgetId": "widget_3",
+          "bbox": {
+            "left": "4.5%",
+            "right": "70.7%",
+            "top": "2.0%",
+            "bottom": "18.1%",
+            "width": "24.8%",
+            "height": "79.9%"
+          },
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": false,
+              "bottom": true
+            },
+            "vCenter": false,
+            "hCenter": false
+          }
+        }
+      },
+      "type": "FIXED",
+      "label": "Map FixedLayout",
+      "order": [
+        "0"
+      ]
+    }
+  },
+  "exbVersion": "1.15.0",
+  "mainSizeMode": "LARGE",
+  "theme": "themes/default/",
+  "forBuilderAttributes": {
+    "lockLayout": false
+  },
+  "template": "blankfullscreen",
+  "widgets": {
+    "widget_2": {
+      "uri": "widgets/arcgis/arcgis-map/",
+      "version": "1.15.0",
+      "label": "Map",
+      "config": {
+        "toolConfig": {
+          "canZoom": true,
+          "canHome": true,
+          "canSearch": true,
+          "canNavigation": true,
+          "canCompass": true,
+          "canLocate": true,
+          "canFullScreen": true,
+          "canMeasure": true,
+          "canBaseMap": true,
+          "canLayers": false
+        },
+        "isUseCustomMapState": false
+      },
+      "id": "widget_2",
+      "layouts": {
+        "MapFixedLayout": {
+          "LARGE": "layout_1"
+        }
+      }
+    },
+    "widget_3": {
+      "uri": "widgets/CoordinateToolsWidget/",
+      "version": "1.15.0",
+      "label": "Coordinate Tools",
+      "config": {
+        "coordinateSystems": [
+          {
+            "id": "1",
+            "wkid": 3440,
+            "label": "PDO 1993/UTM 40N (Easting, Northing)",
+            "units": "EastingNorthing"
+          },
+          {
+            "id": "2",
+            "wkid": 32640,
+            "label": "WGS 84/UTM zone 40N",
+            "units": "EastingNorthing"
+          },
+          {
+            "id": 3,
+            "wkid": 4326,
+            "label": "WGS 84 (Degree Minute Second)",
+            "units": "dms"
+          },
+          {
+            "id": "4",
+            "wkid": 4326,
+            "label": "WGS 84 (Decimal Degree)",
+            "units": "dd"
+          },
+          {
+            "id": "5",
+            "wkid": 4269,
+            "label": "Clarke 1880 (IGN) (Degree Minute Second)",
+            "units": "dms"
+          },
+          {
+            "id": "6",
+            "wkid": 4269,
+            "label": "Clarke 1880 (IGN) (Decimal Degree)",
+            "units": "dd"
+          }
+        ],
+        "attributes": {
+          "portalUrl": "https://dec2023.maps.arcgis.com/",
+          "clientId": "TvwrFFVdWKSYyecP"
+        }
+      },
+      "id": "widget_3",
+      "useMapWidgetIds": [
+        "widget_2"
+      ],
+      "useDataSources": [
+        {
+          "dataSourceId": "dataSource_5-2",
+          "mainDataSourceId": "dataSource_5-2",
+          "rootDataSourceId": "dataSource_5"
+        }
+      ]
+    }
+  },
+  "widgetsManifest": {},
+  "views": {},
+  "sections": {},
+  "dialogs": {},
+  "dataSources": {
+    "dataSource_2": {
+      "id": "dataSource_2",
+      "type": "FEATURE_SERVICE",
+      "sourceLabel": "IClass_T",
+      "itemId": "4387f8e25d7940a18b21d55fda42cc9c",
+      "portalUrl": "https://dec2023.maps.arcgis.com",
+      "url": "https://services1.arcgis.com/36PP9fe9l4BSnArw/arcgis/rest/services/IClass_T/FeatureServer"
+    },
+    "dataSource_3": {
+      "id": "dataSource_3",
+      "type": "WEB_MAP",
+      "sourceLabel": "Daleel Gdb Map_2",
+      "itemId": "8fb15006acde49eea3ff4c2852dfde9b",
+      "portalUrl": "https://dec2023.maps.arcgis.com"
+    },
+    "dataSource_5": {
+      "id": "dataSource_5",
+      "type": "FEATURE_SERVICE",
+      "sourceLabel": "Oman Governorates",
+      "itemId": "aafb19c3021a4437a7486567a3481e07",
+      "portalUrl": "https://dec2023.maps.arcgis.com",
+      "url": "https://services5.arcgis.com/NZAZqzp3pHhYFF6t/arcgis/rest/services/Oman_Governorates/FeatureServer"
+    }
+  },
+  "messageConfigs": {},
+  "attributes": {
+    "portalUrl": "https://dec2023.maps.arcgis.com",
+    "isWebTier": false,
+    "clientId": "",
+    "title": "CoordinateTool",
+    "description": "",
+    "type": "Web Experience",
+    "thumbnail": null
+  },
+  "sharedThemeVariables": null,
+  "originExbVersion": "1.15.0",
+  "pageStructure": [
+    {
+      "page_0": []
+    }
+  ],
+  "timestamp": 1731577987658,
+  "publishTimestamp": 1731578111052
+}
